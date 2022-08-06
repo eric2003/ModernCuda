@@ -1,0 +1,20 @@
+cmake_minimum_required ( VERSION 3.20 )
+
+project ( testprj )
+
+find_package ( CUDAToolkit )
+message ( STATUS  "CUDAToolkit_FOUND=${CUDAToolkit_FOUND}" )
+message ( STATUS  "CUDAToolkit_VERSION=${CUDAToolkit_VERSION}" )
+message ( STATUS  "CUDAToolkit_VERSION_MAJOR=${CUDAToolkit_VERSION_MAJOR}" )
+message ( STATUS  "CUDAToolkit_VERSION_MINOR=${CUDAToolkit_VERSION_MINOR}" )
+message ( STATUS  "CUDAToolkit_VERSION_PATCH=${CUDAToolkit_VERSION_PATCH}" )
+message ( STATUS  "CUDAToolkit_BIN_DIR=${CUDAToolkit_BIN_DIR}" )
+message ( STATUS  "CUDAToolkit_INCLUDE_DIRS=${CUDAToolkit_INCLUDE_DIRS}" )
+message ( STATUS  "CUDAToolkit_LIBRARY_DIR=${CUDAToolkit_LIBRARY_DIR}" )
+message ( STATUS  "CUDAToolkit_LIBRARY_ROOT=${CUDAToolkit_LIBRARY_ROOT}" )
+message ( STATUS  "CUDAToolkit_TARGET_DIR=${CUDAToolkit_TARGET_DIR}" )
+message ( STATUS  "CUDAToolkit_NVCC_EXECUTABLE=${CUDAToolkit_NVCC_EXECUTABLE}" )
+
+get_directory_property( my_import_targets DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} IMPORTED_TARGETS )
+
+message( STATUS "my_import_targets=${my_import_targets}" )
